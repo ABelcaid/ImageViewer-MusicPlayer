@@ -60,52 +60,7 @@ class Element {
 let list = new StackAndQueue();
 let list2 = new StackAndQueue();
 
-//load some images online in the list
-// list.add({
-//     url: "https://cdn.vox-cdn.com/thumbor/bBgejXeLy1mm1Nk1u4zallbrFYk=/0x0:1920x1080/1200x675/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/65642302/jbareham_191158_ply0958_decade_anime.0.jpg",
-//     title: "One Punch Man",
-//     disc: "The best new anime of the 2010s decade"
-// });
-// list.add({
-//     url: "https://assets3.thrillist.com/v1/image/2855064/size/gn-gift_guide_variable_c.jpg",
-//     title: "Demon Slayer",
-//     disc: "Best Anime of 2019: Top New Anime Series to Watch Right Now"
-// });
-// list.add({
-//     url: "https://www.monstersandcritics.com/wp-content/uploads/2019/09/Dr.-STONE-Season-2-release-date-Episode-24-ending-with-Stone-Wars-Dr.-STONE-manga-compared-to-the-anime-Spoilers.jpg",
-//     title: "Dr. Stone",
-//     disc: "Dr. STONE Season 2 release date: Anime sequel confirmed"
-// });
-// list.add({
-//     url: "https://vignette.wikia.nocookie.net/bf9e36bc-c8b7-4ccb-8f3e-e4f958cb86a0/scale-to-width-down/800",
-//     title: "My Hero Academi",
-//     disc: ""
-// });
-//show the pre loaded images
-// show("image");
 
-
-//load some songs those are exist online
-// list2.add({
-//     url: "https://opengameart.org/sites/default/files/wintervillage.ogg",
-//     title: "Winter Village",
-//     album: "RPG town theme"
-// });
-// list2.add({
-//     url: "https://opengameart.org/sites/default/files/jamuary2020_day27.ogg",
-//     title: "Bitter sweet-27",
-//     album: ""
-// });
-// list2.add({
-//     url: "https://opengameart.org/sites/default/files/Background%20Music%202.ogg",
-//     title: "The Ice Caves",
-//     album: "Background Music 2"
-// });
-// list2.add({
-//     url: "https://opengameart.org/sites/default/files/fromtheruins.ogg",
-//     title: "",
-//     album: ""
-// });
 
 function add(type) {
     if (type === "image") {
@@ -128,11 +83,11 @@ function add(type) {
 function show(type) {
     if (type === "image") {
         if (list.show()) {
-            document.getElementById("img").src = list.show().url || "NOImageAvailable.jpg";
+            document.getElementById("img").src = list.show().url || "NOImageAvailable.png";
             document.getElementById("title").innerHTML = list.show().title || "";
             document.getElementById("disc").innerHTML = list.show().disc || "";
         } else {
-            document.getElementById("img").src = "NOImageAvailable.jpg";
+            document.getElementById("img").src = "NOImageAvailable.png";
             document.getElementById("title").innerHTML = "";
             document.getElementById("disc").innerHTML = "";
         }

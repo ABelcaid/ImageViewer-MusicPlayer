@@ -56,6 +56,10 @@ $input-background: #333;
         }
     }
 }
+#hd2{
+    height: 400px;
+    width: 400px;
+}
 body,
 h1,
 h2,
@@ -160,7 +164,7 @@ p {
     button {
         outline: none;
         border: 1px solid orangered;
-        background-color: orange;
+        background-color: #fc0254;
         color: white;
         padding: 15px;
         cursor: pointer;
