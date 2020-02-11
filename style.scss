@@ -4,7 +4,58 @@ $input-background: #333;
 * {
     box-sizing: border-box;
 }
+@mixin flex($dir,$jc){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jc;
+    align-items: center;
+}
 
+
+.navbar{
+    background-color: #08192d;
+    .inav{
+        @include flex(row,space-around);
+        img{
+            width: 161px;
+            height: 121px;
+        }
+        ul{
+            @include flex(row,space-around);
+
+            li{
+                list-style: none;
+                a{
+                    color: #FFF;
+                    font-size: 20px;
+                    margin-left: 60px;
+                    text-decoration: none;
+
+                
+                }
+            }
+        }
+    }
+}
+.header{
+    background-color: #0a183d;
+    height: 88vh;
+    @include flex(row,space-around);
+
+    h1{
+        color: #FFF;
+        text-transform: capitalize;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 70px;
+        margin-bottom: 25px;
+        line-height: .9;
+        position: relative;
+        top: 50px;
+        span{
+            color: #fc0254;
+        }
+    }
+}
 body,
 h1,
 h2,
