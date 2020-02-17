@@ -56,6 +56,16 @@ $input-background: #333;
         }
     }
 }
+.all{
+    padding: 5%;
+    @include flex(column,center);
+    .h1{
+        color: #fc0254;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 70px;
+        margin-bottom: 25px;
+    }
+}
 #hd2{
     height: 400px;
     width: 400px;
