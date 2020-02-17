@@ -74,8 +74,10 @@ function add(type) {
         list2.add({
             url: document.getElementById("url-audio").value,
             title: document.getElementById("title-audio").value,
-            album: document.getElementById("album-audio").value
+            album: document.getElementById("album-audio").value,
+            genre: document.getElementById("album-genre").value,
         });
+        show(type);
     }
 }
 
@@ -95,15 +97,15 @@ function show(type) {
     if (type === "audio") {
         if (list2.show()) {
             document.getElementById("audio").src = list2.show().url || "";
-            document.getElementById("audio-info").innerHTML = (list2.show().title || "No title") + " - " + (list2.show().album || "No album");
+            document.getElementById("audio-info").innerHTML = (list2.show().title || "No title") + " - " + (list2.show().album || "No album") + " - " +(list2.show().genre || "No genre");
             document.getElementById("audio").play();
         } else {
             document.getElementById("audio").src = "";
-            document.getElementById("audio-info").innerHTML = "No title - No album";
+            document.getElementById("audio-info").innerHTML = "No title - No album - No genre";
         }
     }
 }
-
+album-genre
 show("audio");
 document.getElementById("audio").pause();
 
